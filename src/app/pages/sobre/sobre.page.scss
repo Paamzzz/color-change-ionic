@@ -1,118 +1,156 @@
 html {
-       font-size: 62.5%;
+  //62.5% de 16px = 10px. Muito mais fácil de calcular o rem
+  font-size: 62.5%;
+  background-color: #8e3cd9;
 }
 
-.content {
-     padding: 20px;
-      background-color: #fff;
-     position: relative;
-     color: black;
+/* Toolbar */
+ion-toolbar {
+  --background: #ffffff;
+  --color: #8e3cd9;
 }
 
-.content h1 {
-     text-align: center;
-     font-weight: 600;
-     font-size: clamp(2.4rem, 5vw, 5rem);
-     margin-bottom: 50px;
-     margin-top: 30px;
-      background-image: linear-gradient(45deg, #1c0f4a , #8e3cd9 50%, #f72cff 100%);
-     background-clip: text;
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+ion-back-button {
+  --color: #8e3cd9;
 }
 
-// * Seções 
-.timeline {
-     display: flex;
-     flex-direction: column;
-     margin-bottom: 40px;
+.hero-area {
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(45deg, #4f105f, #8e3cd9 50%, #f72cff 100%);
+  width: 100%;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.timeline-title {
-     display: flex;
-     align-items: center;
-     gap: 10px;
+.hero-text {
+  text-align: center;
+  line-height: 0;
+  margin-bottom: 15px;
 }
 
-.timeline-title h2 {
-     font-size: clamp(1.5rem, 3.5vw, 2.0rem);
-     font-weight: 600;
-     color: #230242;
+h1 {
+  font-size: clamp(1.8rem, 6vw, 3.2rem);
+  margin-top: 5px;
+  font-weight: 800;
+  color: #ffffff;
 }
 
-.timeline-icon{
-     font-size: clamp(1.5rem, 3.5vw, 2.0rem);
-     font-weight: 600;
-     color: #8e3cd9;
+p {
+  line-height: 0.5;
+  color: #c7bad4;
+  font-size: clamp(1.1rem, 3vw, 2rem);
 }
 
-.star-wrap {
-       width: clamp(2rem, 10vw, 3rem);
-     height: clamp(2rem, 10vw, 3rem); // Height e width precisam ser iguais. 
-     min-width: clamp(2rem, 10vw, 3rem); //Evita distorção do icone, afetando o fundo
-    border-radius: 50%;
-    margin-left: 15px;
+.circle-preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 3px solid rgba(252, 247, 247, 0.56);
+  margin-bottom: 30px;
+  background-color: rgb(93, 16, 129);
+}
+
+//Conteudo PRINCIPAL
+.main {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100vw;
+  height: auto;
+  min-height: 130vh;
+  border-radius: 60px 60px 0px 0px;
+  z-index: 100;
+  top: 87%;
+  color: rgb(0, 0, 0);
+  align-items: center;
+  padding: 0 auto;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px 24px 0;
+  margin: 20px;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 600;
+  color: #82189c;
+  margin-bottom: 16px;
+}
+
+/* Estilo base dos ranges */
+ion-range {
+  --bar-background: #dfe6ec;
+  --bar-background-active: #bde0fe;
+  --bar-height: 5px;
+  --bar-border-radius: 8px;
+  --knob-size: 30px;
+}
+
+ion-range::part(label) {
+  color: #464646;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Cores individuais por canal */
+#rangeR {
+  --bar-background-active: #fa9b8a;
+  --knob-background: #d82828;
+}
+
+#rangeG {
+  --bar-background-active: #aafa8a;
+  --knob-background: #28d828;
+}
+
+#rangeB {
+  --bar-background-active: #8a8cfa;
+  --knob-background: #282bd8;
+}
+
+/* Botões de ação */
+.button-wrap {
+  display: flex;
+  gap: 12px;
+  margin: 50px 20px 0px 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-form {
+  --border-radius: 30px;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  height: 50px;
+  width: 40%;
+}
+
+//Botoes específicos
+#btn-botao {
+  --background: #8e3cd9;
+  --color: #ffffff;
+}
+
+#btn-fundo {
+  --border-color: #8e3cd9;
+  --color: #8e3cd9;
+}
+
+// Media Query
+@media (max-width: 472px) {
+  .button-wrap {
     align-items: center;
-    justify-content: center;
-    display: flex;
-    box-shadow:  #dbb5ff 0px 5px 10px;
-    border-bottom: #dbb5ff solid 2px;
-    background-color: #fcf7f7;
-}
+    flex-direction: column;
+  }
 
-.timeline-paragraph {
-     font-size: clamp(0.5rem, 4vw, 1rem);
-}
-
-span {
-     font-weight: 600;
-      background-image: linear-gradient(45deg, #1c0f4a , #8e3cd9 50%, #f72cff 100%);
-     background-clip: text;
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-}
-
-
-// * Redes sociais
-
-.redes-sociais {
-     display: flex;
-     flex-direction: column;
-     text-align: center;
-     align-items: center;
-     margin-bottom: 50px;
-     gap: 10px;
-}
-
-.redes-sociais h3 {
-     font-size: clamp(1.5rem, 4vw, 2.6rem);
-     font-weight: 600;
-     padding: 20px;
-     color: #4d015c;
-}
-
-.redes-wrap {
-     display: flex;
-     flex-direction: row;
-     gap: 50px;
-     justify-content: center;
-     text-align: center;
-}
-
-.redes-details {
-       width: clamp(3.7rem, 10vw, 4rem);
-     height: clamp(3.7rem, 10vw, 4rem); // Height e width precisam ser iguais. 
-     min-width: clamp(3.7rem, 10vw, 4rem); //Evita distorção do icone, afetando o fundo
-     background-image: linear-gradient(45deg, #1c0f4a , #8e3cd9 50%, #f72cff 100%);
-     justify-content: center;
-     border-radius: 10px;
-     display: flex;
-     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-
-.redes-logo {
-      font-size: clamp(3rem, 8vw, 3.5rem);
-      color: #ffffff;
-      text-align: center;
-      
+  .btn-form {
+    width: 80%;
+  }
 }

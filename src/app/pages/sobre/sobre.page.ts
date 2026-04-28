@@ -2,20 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { addIcons } from 'ionicons';
-import { star, logoGithub, logoLinkedin } from 'ionicons/icons';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonBackButton, IonIcon } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonBackButton, IonIcon, IonRange, IonButton } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-sobre',
   templateUrl: './sobre.page.html',
   styleUrls: ['./sobre.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonBackButton, IonIcon]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonBackButton, IonRange, IonButton]
 })
 export class SobrePage implements OnInit {
 
   constructor() {
-     addIcons({ star, logoGithub, logoLinkedin })
+     
    }
 
   ngOnInit() {
