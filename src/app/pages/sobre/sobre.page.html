@@ -19,26 +19,31 @@
 
           <div class="main">
                <div class="main-content">
-               <h2>Canais de cor</h2>
+                    <h2>Canais de cor</h2>
 
-               <div class="range-wrap">
-                    <ion-range (ionInput)="colorChange('r', $event)" labelPlacement="start" label="R" id="rangeR" min="0" max="255" value="0"></ion-range>
-                    <ion-range (ionInput)="colorChange('g', $event)" labelPlacement="start" label="G" id="rangeG" min="0" max="255" value="0"></ion-range>
-                    <ion-range (ionInput)="colorChange('b', $event)" labelPlacement="start" label="B" id="rangeB" min="0" max="255" value="0"></ion-range>
+                    <div class="range-wrap">
+                         <ion-range (ionInput)="colorChange('r', $event)" labelPlacement="start" label="R" id="rangeR"
+                              min="0" max="255" value="0"></ion-range>
+                         <ion-range (ionInput)="colorChange('g', $event)" labelPlacement="start" label="G" id="rangeG"
+                              min="0" max="255" value="0"></ion-range>
+                         <ion-range (ionInput)="colorChange('b', $event)" labelPlacement="start" label="B" id="rangeB"
+                              min="0" max="255" value="0"></ion-range>
+                    </div>
+
+                    <!-- Botões de ação -->
+                    <div class="button-wrap">
+                         <ion-button (click)="changeButton()" class="btn-form" id="btn-botao" shape="round"
+                              expand="block">
+                              Cor botão
+                         </ion-button>
+                         <ion-button (click)="changeBackground()" class="btn-form" id="btn-fundo" shape="round"
+                              fill="outline" expand="block">
+                              Cor fundo
+                         </ion-button>
+                    </div>
+
                </div>
-
-               <!-- Botões de ação -->
-               <div class="button-wrap">
-                    <ion-button (click)="changeButton()" class="btn-form" id="btn-botao" shape="round" expand="block">
-                         Cor botão
-                    </ion-button>
-                    <ion-button (click)="changeBackground()" class="btn-form" id="btn-fundo" shape="round" fill="outline" expand="block">
-                         Cor fundo
-                    </ion-button>
-               </div>
-
           </div>
-     </div>
      </div>
 
 

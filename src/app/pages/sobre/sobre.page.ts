@@ -5,18 +5,18 @@ import { addIcons } from 'ionicons';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonBackButton, IonIcon, IonRange, IonButton } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-sobre',
-  templateUrl: './sobre.page.html',
-  styleUrls: ['./sobre.page.scss'],
-  standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonBackButton, IonRange, IonButton]
+     selector: 'app-sobre',
+     templateUrl: './sobre.page.html',
+     styleUrls: ['./sobre.page.scss'],
+     standalone: true,
+     imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonBackButton, IonRange, IonButton]
 })
 export class SobrePage implements OnInit {
-     r : number = 0 ;
-     g : number = 0 ;
-     b : number = 0 ;
+     r: number = 0;
+     g: number = 0;
+     b: number = 0;
 
-     colorChange(cor : string, event : any) {
+     colorChange(cor: string, event: any) {
           if (cor === "r") { // primeiro armazenamos o valos, depois mudamos em tempo real.
                this.r = event.detail.value;
           } else if (cor === 'g') {
@@ -31,7 +31,7 @@ export class SobrePage implements OnInit {
      changeCircle() {
           const circle = document.querySelector('#circle-preview');
           if (circle) {
-              (circle as HTMLElement).style.backgroundColor = `rgb(${this.r},${this.g},${this.b})`;
+               (circle as HTMLElement).style.backgroundColor = `rgb(${this.r},${this.g},${this.b})`;
           }
      }
 
@@ -50,10 +50,10 @@ export class SobrePage implements OnInit {
           }
      }
 
-  constructor() {
-     
-   }
+     constructor() {
 
-  ngOnInit() {
-  }
+     }
+
+     ngOnInit() {
+     }
 }
