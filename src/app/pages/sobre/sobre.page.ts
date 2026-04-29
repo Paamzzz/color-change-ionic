@@ -20,9 +20,3 @@ export class SobrePage implements OnInit {
   ngOnInit() {
   }
 }
-
-//* Para estudos:
-// import { addIcons } from 'ionicons' → traz a função que popula o dicionário
-// import { starFilled } from 'ionicons/icons' → traz o SVG do ícone
-// IonIcon no imports do @Component → diz pro Angular que você vai usar o componente <ion-icon> no HTML
-// addIcons({ starFilled }) no constructor → registra o ícone no dicionário interno do Ionicons para o IonIcon conseguir encontrá-lo quando o HTML pedir
