@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">av-avaliadora</string>
-    <string name="title_activity_main">av-avaliadora</string>
+    <string name="app_name">Projeto da Pampam</string>
+    <string name="title_activity_main">Projeto da Pampam</string>
     <string name="package_name">io.ionic.starter</string>
     <string name="custom_url_scheme">io.ionic.starter</string>
 </resources>
