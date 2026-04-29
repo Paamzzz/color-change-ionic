@@ -24,6 +24,7 @@ ion-back-button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: ease-in 0.3s all;
 }
 
 .hero-text {
@@ -41,11 +42,11 @@ h1 {
 
 p {
   line-height: 0.5;
-  color: #c7bad4;
+  color: rgb(199, 186, 212);
   font-size: clamp(1.1rem, 3vw, 2rem);
 }
 
-.circle-preview {
+#circle-preview {
   width: 100px;
   height: 100px;
   border-radius: 100px;
@@ -137,6 +138,7 @@ ion-range::part(label) {
   --background: #8e3cd9;
   --color: #ffffff;
   --box-shadow: none;
+  --transition: ease-in 0.3s all;
 }
 
 #btn-fundo {

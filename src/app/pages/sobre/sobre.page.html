@@ -14,7 +14,7 @@
                <p>Ajuste os valores RGB</p>
           </div>
 
-          <div class="circle-preview">
+          <div id="circle-preview">
           </div>
 
           <div class="main">
@@ -22,17 +22,17 @@
                <h2>Canais de cor</h2>
 
                <div class="range-wrap">
-                    <ion-range labelPlacement="start" label="R" id="rangeR" min="0" max="255" value="0"></ion-range>
-                    <ion-range labelPlacement="start" label="G" id="rangeG" min="0" max="255" value="0"></ion-range>
-                    <ion-range labelPlacement="start" label="B" id="rangeB" min="0" max="255" value="0"></ion-range>
+                    <ion-range (ionInput)="colorChange('r', $event)" labelPlacement="start" label="R" id="rangeR" min="0" max="255" value="0"></ion-range>
+                    <ion-range (ionInput)="colorChange('g', $event)" labelPlacement="start" label="G" id="rangeG" min="0" max="255" value="0"></ion-range>
+                    <ion-range (ionInput)="colorChange('b', $event)" labelPlacement="start" label="B" id="rangeB" min="0" max="255" value="0"></ion-range>
                </div>
 
                <!-- Botões de ação -->
                <div class="button-wrap">
-                    <ion-button class="btn-form" id="btn-botao" shape="round" expand="block">
+                    <ion-button (click)="changeButton()" class="btn-form" id="btn-botao" shape="round" expand="block">
                          Cor botão
                     </ion-button>
-                    <ion-button class="btn-form" id="btn-fundo" shape="round" fill="outline" expand="block">
+                    <ion-button (click)="changeBackground()" class="btn-form" id="btn-fundo" shape="round" fill="outline" expand="block">
                          Cor fundo
                     </ion-button>
                </div>
